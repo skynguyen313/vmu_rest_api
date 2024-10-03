@@ -5,6 +5,7 @@ from .serializers import QuestionSerializer,TestSerializer
 from rest_framework.response import Response
 from rest_framework import status
 
+
 class QuestionViewSet(viewsets.ViewSet):
     queryset = Question.objects.all()
     lookup_field = 'content'
@@ -42,7 +43,8 @@ class QuestionViewSet(viewsets.ViewSet):
         question = get_object_or_404(self.queryset,content=content)
         question.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-    
+
+
 class TestViewSet(viewsets.ViewSet):
     queryset = Test.objects.all()
     lookup_field = 'name'

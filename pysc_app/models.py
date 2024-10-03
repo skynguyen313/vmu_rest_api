@@ -17,17 +17,27 @@ class Test(models.Model):
     class Meta:
         db_table = 'pysc_Test'
 
-class TestDetails(models.Model):
+class TestDetail(models.Model):
     question = models.ForeignKey(
         Question,
-        related_name='test_details',
-        on_delete=models.CASCADE,
+        related_name = 'test_details',
+        on_delete = models.CASCADE,
         )
     test = models.ForeignKey(
         Test,
-        related_name='test_details',
-        on_delete=models.CASCADE,
+        related_name = 'test_details',
+        on_delete = models.CASCADE,
         )
     class Meta:
-        unique_together = (("question", "test"),)
-        db_table = 'pysc_TestDetails'
+        unique_together = (('question', 'test'),)
+        db_table = 'pysc_TestDetail'
+
+class TestResultDetail(models.Model):
+    test_detail = models.ForeignKey(
+        TestDetail,
+        related_name = 'test_result_details',
+        on_delete = models.PROTECT,
+    )
+    score = models.SmallIntegerField(null=False)
+    class Meta:
+        db_table = 'pysc_TestResultDetail'
