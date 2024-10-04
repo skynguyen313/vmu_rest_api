@@ -11,17 +11,22 @@ The project work on django-framework.
 python -m venv venv
 ```
 * Activate Virtual Environment on Windows
-```.\venv\Scripts\activate
+```
+.\venv\Scripts\activate
 ```
 * Activate Virtual Environment on Unix or MacOs
-```source venv/bin/activate
+```
+source venv/bin/activate
 ```
 * Using Virtual Environment
-```.\venv\Scripts\Activate.ps1
+```
+.\venv\Scripts\Activate.ps1
 ```
 * Install all packages with file requirements.txt
-```pip install -r requirements.txt
+```
+pip install -r requirements.txt
 ```
 * Export installed packages and versions in the project to file requirements.txt
-```pip freeze > requirements.txt
+```
+pip freeze > requirements.txt
 ```
