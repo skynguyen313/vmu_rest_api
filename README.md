@@ -1,21 +1,32 @@
-██    ██ ███    ███ ██    ██     ██████  ███████ ███████ ████████      █████  ██████  ██ 
-██    ██ ████  ████ ██    ██     ██   ██ ██      ██         ██        ██   ██ ██   ██ ██ 
-██    ██ ██ ████ ██ ██    ██     ██████  █████   ███████    ██        ███████ ██████  ██ 
- ██  ██  ██  ██  ██ ██    ██     ██   ██ ██           ██    ██        ██   ██ ██      ██ 
-  ████   ██      ██  ██████      ██   ██ ███████ ███████    ██        ██   ██ ██      ██ 
+# VMU REST API
+Rest API service system
 
-1. Giới thiệu
-2. Hướng dẫn
-   2.1. Tạo môi trường ảo (virtual environment)
-     $ python -m venv venv
-     $ cd venv/
-     $ cd scripts
-     $ .\activate
-   2.2. Kích hoạt môi trường venv
-     Đi đến đường dẫn có chứa thư mục 'venv' thực hiện lệnh
-     $ .\venv\Scripts\Activate.ps1
-   2.3. Cài đặt các gói package
-     Trong thưu mục dự án vmu_rest_api thực hiện lệnh
-     $ pip install -r requirements.txt
-     Hoặc muốn liệt kê tất cả các gói và phiên bản đã được cài đặt trong môi trường hiện tại, thực hiện lệnh
-     $ pip freeze > requirements.txt
+## Introduction
+The project work on django-framework.
+
+## Building and Installation
+* Install Python version 3.10.10 [here](https://www.python.org/downloads/release/python-31010/).
+* Create a Virtual Environment
+```Shell
+python -m venv venv
+```
+* Activate Virtual Environment on Windows
+```
+.\venv\Scripts\activate
+```
+* Activate Virtual Environment on Unix or MacOs
+```
+source venv/bin/activate
+```
+* Using Virtual Environment
+```
+.\venv\Scripts\Activate.ps1
+```
+* Install all packages with file requirements.txt
+```
+pip install -r requirements.txt
+```
+* Export installed packages and versions in the project to file requirements.txt
+```
+pip freeze > requirements.txt
+```
