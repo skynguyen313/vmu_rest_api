@@ -8,19 +8,19 @@ The project work on django-framework.
 * Install Python version 3.10.10 [here](https://www.python.org/downloads/release/python-31010/).
 * Create a Virtual Environment
 ```Shell
-python -m venv venv
+python -m venv myvenv
 ```
 * Activate Virtual Environment on Windows
 ```
-.\venv\Scripts\activate
+.\myvenv\Scripts\activate
 ```
 * Activate Virtual Environment on Unix or MacOs
 ```
-source venv/bin/activate
+source myvenv/bin/activate
 ```
 * Using Virtual Environment
 ```
-.\venv\Scripts\Activate.ps1
+.\myvenv\Scripts\Activate.ps1
 ```
 * Install all packages with file requirements.txt
 ```
