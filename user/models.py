@@ -9,7 +9,7 @@ class User(AbstractUser):
         STAFF = "STAFF", 'Staff'
         STUDENT = "STUDENT", 'Student'
 
-    base_role = Role.STUDENT
+    base_role = Role.ADMIN
     role = models.CharField(max_length=50, choices=Role.choices)
 
     def save(self, *args, **kwargs):
