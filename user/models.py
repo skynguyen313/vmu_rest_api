@@ -9,7 +9,7 @@ class User(AbstractUser):
         STAFF = "STAFF", 'Staff'
         STUDENT = "STUDENT", 'Student'
 
-    base_role = Role.STUDENT
+    base_role = Role.ADMIN
     role = models.CharField(max_length=50, choices=Role.choices)
 
     def save(self, *args, **kwargs):
@@ -49,11 +49,11 @@ class StaffManager(BaseUserManager):
         return results.filter(role=User.Role.STAFF)
 
 
-class Teacher(User):
+class Staff(User):
 
     base_role = User.Role.STAFF
 
-    teacher = StaffManager()
+    staff = StaffManager()
 
     class Meta:
         proxy = True
@@ -64,9 +64,9 @@ class Teacher(User):
 
 class StafferProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    teacher_id = models.IntegerField(null=True, blank=True)
+    staff_id = models.IntegerField(null=True, blank=True)
 
-@receiver(post_save, sender=Teacher)
+@receiver(post_save, sender=Staff)
 def create_user_profile(sender, instance, created, **kwargs):
     if created and instance.role == "STAFF":
         StafferProfile.objects.create(user=instance)
